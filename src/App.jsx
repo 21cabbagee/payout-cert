@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { W8BENWizardModal } from './components/W8BENWizardModal';
 import { W8BENViewerModal } from './components/W8BENViewerModal';
 import { CABModal } from './components/CABModal';
+import OutcomeChart from './components/OutcomeChart';
 import { MOCK_CONTRACTORS } from './data/mockContractors';
 import { Check, ShieldCheck } from 'lucide-react';
 
@@ -83,6 +84,9 @@ export default function App() {
           onScrollToVault={handleScrollToVault}
           onScrollToTreaty={handleScrollToTreaty}
         />
+
+        {/* Julien Bek $1:$6 Economic Engine / Larry Ellison SLA Proof */}
+        <OutcomeChart onCtaClick={() => setCabOpen(true)} />
 
         <ContractorVault
           contractors={contractors}
